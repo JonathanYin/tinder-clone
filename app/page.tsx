@@ -23,10 +23,11 @@ export default function Home() {
 
       {/* Main Content */}
       <div className='absolute inset-0 z-10 flex flex-col items-center justify-center'>
-        <h1 className='text-shadow text-9xl font-bold text-white'>
+        <h1 className='text-shadow select-none text-9xl font-bold text-white'>
+          {' '}
           Swipe Right
         </h1>
-        <button className='mt-4 rounded-full bg-gradient-to-r from-pink-500 to-orange-500 px-8 py-4 text-4xl font-bold text-white'>
+        <button className='mt-10 rounded-full bg-gradient-to-r from-[#FD297B] via-[#FF5864] to-[#FF655B] px-6 py-3 text-2xl font-bold text-white transition duration-300 hover:from-[#FD5091] hover:via-[#FF6F80] hover:to-[#FF7570]'>
           Create Account
         </button>
       </div>
