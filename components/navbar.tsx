@@ -7,7 +7,7 @@ interface NavBarProps {
 
 const NavBar = ({ className }: NavBarProps) => (
   <header
-    className={`fixed left-0 top-0 z-10 w-full bg-gradient-to-b from-black to-transparent ${className}`}
+    className={`gradient-shadow fixed left-0 top-0 z-10 w-full ${className}`}
   >
     <nav className='mx-auto flex items-center justify-between bg-transparent px-6 py-4'>
       <div className='flex-shrink-0'>
@@ -17,7 +17,7 @@ const NavBar = ({ className }: NavBarProps) => (
               src='/images/tinder_logo_white.png'
               alt='logo'
               width={150}
-              height={20}
+              height={50}
             />
           </div>
         </Link>
