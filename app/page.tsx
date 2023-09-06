@@ -8,6 +8,13 @@ import { CardWithForm } from '@/components/cardwithform';
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
 
+  const closeOnOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.classList && target.classList.contains('bg-opacity-50')) {
+      setShowModal(false);
+    }
+  };
+
   return (
     <main className='relative flex h-screen w-full flex-col items-center justify-center overflow-hidden'>
       {/* Background Image */}
@@ -41,14 +48,11 @@ export default function Home() {
 
         {/* Modal */}
         {showModal && (
-          <div className='absolute inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50'>
+          <div
+            className='absolute inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50'
+            onClick={closeOnOverlayClick}
+          >
             <CardWithForm setShowModal={setShowModal} />
-            <button
-              className='absolute right-5 top-5 p-2 text-white'
-              onClick={() => setShowModal(false)}
-            >
-              Close
-            </button>
           </div>
         )}
       </div>
