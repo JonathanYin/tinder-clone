@@ -56,7 +56,7 @@ export function CardWithForm({ setShowModal }: { setShowModal: any }) {
           <div className='grid w-full items-center gap-4'>
             <div className='flex flex-col space-y-1.5'>
               <Label htmlFor='email'>Email address</Label>
-              <Input id='email' placeholder='Email' />
+              <Input id='email' placeholder='Email' className='bg-white' />
             </div>
             <div className='flex flex-col space-y-1.5'>
               <Label htmlFor='password'>Password</Label>
@@ -65,6 +65,7 @@ export function CardWithForm({ setShowModal }: { setShowModal: any }) {
                   id='password'
                   type={showPassword ? 'text' : 'password'}
                   placeholder='Password'
+                  className='bg-white'
                 />
                 <button
                   type='button'
@@ -82,6 +83,7 @@ export function CardWithForm({ setShowModal }: { setShowModal: any }) {
                 id='confirm-password'
                 type={showPassword ? 'text' : 'password'}
                 placeholder='Confirm Password'
+                className='bg-white'
               />
             </div>
           </div>
@@ -93,6 +95,7 @@ export function CardWithForm({ setShowModal }: { setShowModal: any }) {
           onClick={() => {
             setShowModal(false);
           }}
+          className='bg-white'
         >
           Cancel
         </Button>

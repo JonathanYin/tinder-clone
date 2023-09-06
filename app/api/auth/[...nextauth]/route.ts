@@ -1,15 +1,25 @@
-// app/api/auth/[...nextauth]/route.js
+import type { NextApiRequest, NextApiResponse } from 'next';
+import NextAuth from 'next-auth';
 
-import NextAuth from 'next-auth'
-import GoogleProvider from 'next-auth/providers/google'
+export default async function auth(req: NextApiRequest, res: NextApiResponse) {
+  if (req.query.nextauth.includes('callback') && req.method === 'POST') {
+    console.log(
+      'Handling callback request from my Identity Provider',
+      req.body
+    );
+  }
 
-export const options={
-    GoogleProvider({
-         clientId: process.env.GOOGLE_CLIENT_ID,
-         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      })
+  // Get a custom cookie value from the request
+  const someCookie = req.cookies['some-custom-cookie'];
+
+  return await NextAuth(req, res, {
+    callbacks: {
+      session({ session, token }) {
+        // Return a cookie value as part of the session
+        // This is read when `req.query.nextauth.includes("session") && req.method === "GET"`
+        session.someCookie = someCookie;
+        return session;
+      },
+    },
+  });
 }
-
-const handler=NextAuth(options)
-
-export {handler as GET , handler as POST}
