@@ -1,31 +1,19 @@
 import * as React from 'react';
 
-import { Button } from '@/components/ui/button';
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
 
 export function Testimonial() {
   return (
-    <div className='bg- flex justify-items-center gap-12'>
+    <div className='flex justify-items-center gap-16'>
       <Card className='w-[400px]'>
         <CardHeader>
-          <CardTitle>Rebecca</CardTitle>
-          <CardDescription>
+          <CardTitle className='pb-2'>Rebecca</CardTitle>
+          <CardDescription className='text-gray-600'>
             I was also adamant the next man I&apos;d be with and commit to,
             would be the man I&apos;d spend the rest of my life with (just not
             married). I was very fussy and didn&apos;t expect to meet a man on
@@ -37,8 +25,8 @@ export function Testimonial() {
 
       <Card className='w-[400px]'>
         <CardHeader>
-          <CardTitle>Lauren</CardTitle>
-          <CardDescription>
+          <CardTitle className='pb-2'>Lauren</CardTitle>
+          <CardDescription className='text-gray-600'>
             For all the single people out there, especially introverted ones
             like us: do not be afraid to travel outside of your comfort zone.
             That&apos;s where you&apos;ll make a genuine connection. Tinder
@@ -49,8 +37,8 @@ export function Testimonial() {
 
       <Card className='w-[400px]'>
         <CardHeader>
-          <CardTitle>Alyssa</CardTitle>
-          <CardDescription>
+          <CardTitle className='pb-2'>Alyssa</CardTitle>
+          <CardDescription className='text-gray-600'>
             My college roommate and I both would stay up on Tinder, not looking
             for anything serious (also not looking for hookups though, just
             entertainment). My now husband and I matched on Tinder.

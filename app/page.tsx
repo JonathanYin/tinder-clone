@@ -16,8 +16,8 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      if (scrolled >= 0 && scrolled <= 300) {
-        setOpacity(1 - scrolled / 300);
+      if (scrolled >= 0 && scrolled <= 500) {
+        setOpacity(1 - scrolled / 500);
       }
     };
 
@@ -65,8 +65,26 @@ export default function Home() {
       </Parallax>
 
       {/* Additional Content */}
-      <section className='flex w-full flex-col items-center justify-center p-8'>
+      <section className='flex w-full flex-col items-center justify-center p-8 text-sm'>
         <Testimonial />
+        <div className='flex flex-col p-8 text-gray-400 '>
+          Single people, listen up: If you&apos;re looking for love, want to
+          start dating, or just keep it casual, you need to be on Tinder. With
+          over 55 billion matches made, it&apos;s the place to be to meet your
+          next best match. Let&apos;s be real, the dating landscape looks very
+          different today, as most people are meeting online. With Tinder, the
+          world&apos;s most popular free dating app, you have millions of other
+          single people at your fingertips and they&apos;re all ready to meet
+          someone like you. Whether you&apos;re straight or in the LGBTQIA
+          community, Tinder&apos;s here to bring you all the sparks. There
+          really is something for everyone on Tinder. Want to get into a
+          relationship? You got it. Trying to find some new friends? Say no
+          more. New kid on campus and looking to make the most of your college
+          experience? Tinder U&apos;s got you covered. Tinder isn&apos;t your
+          average dating site — it&apos;s the most diverse dating app, where
+          adults of all backgrounds and experiences are invited to make
+          connections, memories, and everything in between.
+        </div>
         <Footer />
       </section>
 
