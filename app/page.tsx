@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import NavBar from '../components/navbar';
 import { useEffect, useState } from 'react';
 import { CardWithForm } from '@/components/cardwithform';
